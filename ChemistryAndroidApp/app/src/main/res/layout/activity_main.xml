@@ -60,11 +60,11 @@
 
     <Button
         android:layout_width="162dp"
-        android:layout_height="60dp"
+        android:layout_height="51dp"
         android:text="@string/sumbitButton"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="557dp">
+        tools:layout_editor_absoluteY="494dp">
 
     </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,12 @@
     <string name="homeScreenText">I came up with the idea of this app when walking through the Natural History Museum in London.\n\nI thought that it would be a good idea to create an application for students studying chemistry which would tell them information about elements and their structures.</string>
 
     <string name="gettingStartedTitle">Getting Started</string>
-    <string name="gettingStarted">To start, write the name of the element (either scientifically or in plain English) or the name of the compound below. </string>
+    <string name="gettingStarted">Write the name of the Element / Compound you want to know about, or to view the periodic table, press the associated button.</string>
     <string name="hint">Insert Name of Element or Compound</string>
+
+    <string name="periodicTableButton">View Periodic Table</string>
     <string name="sumbitButton">Submit</string>
+
+    <!-- Periodic Page String Elements -->
+    <string name="backButton">Homepage</string>
 </resources>

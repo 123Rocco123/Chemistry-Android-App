@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/HomeScreenTitle"
+        android:layout_width="699dp"
+        android:layout_height="32dp"
+
+        android:text="@string/homeScreenTitle"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/HomeScreenText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/HomeScreenText"
+        android:layout_width="699dp"
+        android:layout_height="83dp"
+
+        android:text="@string/homeScreenText"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:id="@+id/gettingStartedTitle"
+        android:layout_width="699dp"
+        android:layout_height="28dp"
+
+        android:text="@string/gettingStartedTitle"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/gettingStartedText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeScreenText" />
+
+    <!-- Submit Button Code -->
+
+    <!-- Periodic Table Button -->
+
+    <TextView
+        android:id="@+id/gettingStartedText"
+        android:layout_width="699dp"
+        android:layout_height="51dp"
+
+        android:text="@string/gettingStarted"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="181dp"
+        android:layout_height="64dp"
+
+        android:text="@string/sumbitButton"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PeriodicTableButton"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        tools:ignore="MissingConstraints">
+
+    </Button>
+
+    <Button
+        android:id="@+id/PeriodicTableButton"
+        android:layout_width="162dp"
+        android:layout_height="65dp"
+
+        android:layout_marginEnd="180dp"
+        android:text="@string/periodicTableButton"
+
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="699dp"
+        android:layout_height="65dp"
+        android:ems="10"
+
+        android:hint="@string/hint"
+        android:inputType="textPersonName"
+
+        android:textColor="@color/black"
+
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gettingStartedText"
+        app:layout_constraintVertical_bias="0.123"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

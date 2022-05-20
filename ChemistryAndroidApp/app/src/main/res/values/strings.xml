@@ -12,4 +12,5 @@
 
     <!-- Periodic Page String Elements -->
     <string name="backButton">Homepage</string>
+    <string name="description">Periodic Table</string>
 </resources>

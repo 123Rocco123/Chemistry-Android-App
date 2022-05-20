@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     // Contains the name of the Element
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     // Contains the button
     Button submitButton;
     Button PeriodicTableButton;
+
+    // Elements table
+    String[] elementsArray = {"hydrogen"};
+    String[][] elementsInformation = {{"Number of Molecules: 1"}};
 
     private void popUpMessage(String elementToSearch) {
         // The "Toast.LENGTH_SHORT" is used to determine the duration that the pop-up message stays on screen for.

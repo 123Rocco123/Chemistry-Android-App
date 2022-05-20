@@ -2,6 +2,7 @@ package com.example.androidchemistryapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Contains the button
     Button submitButton;
+    Button PeriodicTableButton;
 
     private void popUpMessage(String elementToSearch) {
         // The "Toast.LENGTH_SHORT" is used to determine the duration that the pop-up message stays on screen for.
@@ -32,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         nameInput = (EditText) findViewById(R.id.nameInput);
+
         submitButton = (Button) findViewById(R.id.submitButton);
+        PeriodicTableButton = (Button) findViewById(R.id.PeriodicTableButton);
 
         // Similar to the "addActionListener" in Swing
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
                 popUpMessage(name);
             }
+        });
+
+        // Periodic Table Action Listener
+        PeriodicTableButton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               // Intent is used to go from one page to another.
+                  // The way that it works is that it takes two arguments, where you are now, and where you wanna go.
+                  // We can't just use ".this" because we're inside of the setOnClickListener, therefore, we have to use the "MainActivity.this".
+                  // We then just write the name of the class that we wanna go to.
+               startActivity(new Intent(MainActivity.this, PeriodicTable.class));
+           }
         });
     }
 }

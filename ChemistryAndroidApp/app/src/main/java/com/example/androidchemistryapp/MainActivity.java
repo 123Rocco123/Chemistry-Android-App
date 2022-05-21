@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Used to remove top bar from page
         getSupportActionBar().hide();
 
         nameInput = (EditText) findViewById(R.id.nameInput);
@@ -49,9 +51,17 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name = (nameInput.getText()).toString();
+                name = ((nameInput.getText()).toString()).toLowerCase();
 
-                popUpMessage(name);
+                for (int i = 0; i < elementsArray.length; i++) {
+                    // The if statement checks if the element that the user has written is inside of the "elementsArray".
+                    if (name.equals(elementsArray[i])) {
+                        popUpMessage(name);
+                    } // Executed once the last element in the length has been reached and doesn't meet the requirement above.
+                    else if (i == (elementsArray.length - 1)) {
+                        popUpMessage("test");
+                    }
+                }
             }
         });
 

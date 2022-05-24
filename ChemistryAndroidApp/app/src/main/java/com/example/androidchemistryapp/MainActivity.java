@@ -71,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(newIntent);
                     } // Executed once the last element in the length has been reached and doesn't meet the requirement above.
                     else if (i == (elementsArray.length - 1)) {
-                        popUpMessage("test");
+                        // Popup Message in case of nothing being found
+                        Toast.makeText(MainActivity.this, "Nothing Found :(", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

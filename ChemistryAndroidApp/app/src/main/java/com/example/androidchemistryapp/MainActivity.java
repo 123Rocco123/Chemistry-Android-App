@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Elements table
     String[] elementsArray = {"hydrogen"};
-    String[][] elementsInformation = {{"Number of Molecules: 1"}};
+    String[][] elementsInfo = {{"H", "-252.2 °C", "-252.9 °C", "1s^1", "+1", "1.00784 u"}};
 
     private void popUpMessage(String elementToSearch) {
         // The "Toast.LENGTH_SHORT" is used to determine the duration that the pop-up message stays on screen for.
@@ -57,6 +57,18 @@ public class MainActivity extends AppCompatActivity {
                     // The if statement checks if the element that the user has written is inside of the "elementsArray".
                     if (name.equals(elementsArray[i])) {
                         popUpMessage(name);
+
+                        Intent newIntent = new Intent(MainActivity.this, SearchResult.class);
+
+                        newIntent.putExtra("compoundName", name);
+                        newIntent.putExtra("0", elementsInfo[0][0]);
+                        newIntent.putExtra("1", elementsInfo[0][1]);
+                        newIntent.putExtra("2", elementsInfo[0][2]);
+                        newIntent.putExtra("3", elementsInfo[0][3]);
+                        newIntent.putExtra("4", elementsInfo[0][4]);
+                        newIntent.putExtra("5", elementsInfo[0][5]);
+
+                        startActivity(newIntent);
                     } // Executed once the last element in the length has been reached and doesn't meet the requirement above.
                     else if (i == (elementsArray.length - 1)) {
                         popUpMessage("test");

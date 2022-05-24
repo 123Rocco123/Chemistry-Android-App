@@ -13,4 +13,12 @@
     <!-- Periodic Page String Elements -->
     <string name="backButton">Homepage</string>
     <string name="description">Periodic Table</string>
+
+    <!-- Results Page String Elements -->
+    <string name="ElementFormula">Formula of Element</string>
+    <string name="MeltingPoint">Melting Point</string>
+    <string name="BoilingPoint">Boiling Point</string>
+    <string name="ElectronConfiguration">Electron Configuration</string>
+    <string name="Charge">Charge</string>
+    <string name="AtomicMass">Atomic Mass</string>
 </resources>
